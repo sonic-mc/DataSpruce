@@ -24,18 +24,36 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="relative z-10 flex justify-between items-center px-6 py-4 bg-blue-900 text-white">
-        <div class="text-lg font-bold">DataSpruce Pvt Ltd</div>
-        <ul class="flex space-x-6">
-            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('services') }}">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
+    <nav class="relative z-10 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-lg font-bold">DataSpruce Pvt Ltd</div>
+            <button id="nav-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <ul id="nav-menu"
+            class="hidden flex-col md:flex md:flex-row md:space-x-6 mt-4 md:mt-0 px-6 pb-4 md:pb-0 text-left md:text-center">
+            <li><a href="{{ route('home') }}" class="block py-2 hover:text-gray-300">Home</a></li>
+            <li><a href="{{ route('about') }}" class="block py-2 hover:text-gray-300">About</a></li>
+            <li><a href="{{ route('services') }}" class="block py-2 hover:text-gray-300">Services</a></li>
+            <li><a href="{{ route('contact') }}" class="block py-2 hover:text-gray-300">Contact</a></li>
         </ul>
     </nav>
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const menu = document.getElementById('nav-menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
-    <!-- Hero Section with Background Image -->
-    <section class="relative z-10 text-center px-4 py-20 md:py-32 bg-cover bg-center" style="background-image: url('https://img.freepik.com/premium-vector/abstract-financial-chart-with-uptrend-line-graph-stock-market-grey-background-vector-design_546559-442.jpg?ga=GA1.1.341280457.1747978859&w=740');">
+    <!-- Hero Section -->
+    <section class="relative z-10 text-center px-4 py-20 md:py-32 bg-cover bg-center"
+             style="background-image: url('https://img.freepik.com/premium-vector/abstract-financial-chart-with-uptrend-line-graph-stock-market-grey-background-vector-design_546559-442.jpg?ga=GA1.1.341280457.1747978859&w=740');">
         <div class="bg-white bg-opacity-80 py-10 px-4 rounded-lg max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl font-light mb-4">Transform Your Data, Empower Your Business</h1>
             <p class="text-gray-700 text-lg mb-8">Professional data analytics and cleaning solutions for your business.</p>
@@ -46,7 +64,7 @@
         </div>
     </section>
 
-    <!-- About Section with Image -->
+    <!-- About Section -->
     <section id="about" class="relative z-10 py-16 bg-white text-center px-4">
         <div class="md:flex md:items-center md:justify-center max-w-6xl mx-auto">
             <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
@@ -54,16 +72,19 @@
                 <p class="text-gray-700 mb-6">At DataSpruce, we specialize in data cleaning, analytics, and automation. Our mission is to help businesses unlock the power of data for better decision-making.</p>
                 <a href="{{ route('about') }}" class="text-white bg-blue-600 px-5 py-2 rounded hover:bg-blue-500">Learn More</a>
             </div>
-            <img src="https://img.freepik.com/premium-photo/finance-staff-holding-financial-graph-documents-presented-executives-attendees-via-videoconference-meeting-summarize-operations-all-departments-videoconferencing-concept_528263-2223.jpg" alt="About Us" class="md:w-1/2 rounded shadow-lg">
+            <div class="md:w-1/2">
+                <img src="https://img.freepik.com/premium-photo/young-african-male-with-laptop-work-home-office_769609-1593.jpg?ga=GA1.1.341280457.1747978859&semt=ais_hybrid&w=740"
+                     alt="About Us" class="rounded shadow-lg w-full h-auto object-cover">
+            </div>
         </div>
     </section>
 
-    <!-- Services Section with Images -->
+    <!-- Services Section -->
     <section id="services" class="relative z-10 py-16 bg-gray-50 text-center px-4">
         <h2 class="text-3xl font-semibold mb-10">Our Services</h2>
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div class="bg-white p-6 rounded shadow">
-                <img src="https://th.bing.com/th/id/OIP.2r3bEXN5mjyUQgcH5ECL8QHaE8?cb=iwp2&pid=ImgDet&w=179&h=119&c=7&dpr=1.5" alt="Data Cleaning" class="mb-4 rounded w-full h-40 object-cover">
+                <img src="https://media.istockphoto.com/id/2214727178/photo/business-team-analyzing-financial-data-on-laptop-with-digital-reports.jpg?s=612x612&w=0&k=20&c=91iPV4uwiACAgGXdvZiPGoJeu8NELTo0vUAm43E_v-w=" alt="Data Cleaning" class="mb-4 rounded w-full h-40 object-cover">
                 <h4 class="text-xl font-bold mb-2">Data Cleaning & Formatting</h4>
                 <p class="text-gray-600">Accurate, clean data ready for analysis.</p>
             </div>
@@ -73,39 +94,46 @@
                 <p class="text-gray-600">Interactive dashboards using Power BI, Tableau, and more.</p>
             </div>
             <div class="bg-white p-6 rounded shadow">
-                <img src="https://th.bing.com/th/id/OIP.MtoNxBkwQ7dre5SILY5f7gHaE8?cb=iwp2&w=1200&h=800&rs=1&pid=ImgDetMain" alt="Data Analysis" class="mb-4 rounded w-full h-40 object-cover">
+                <img src="https://media.istockphoto.com/id/2150486283/photo/professional-analyst-employee-using-spreadsheet-data.jpg?s=612x612&w=0&k=20&c=-iZ0EyrY3GV2w9x_MNQ4ZBa0Y0MfwqHkqkdbL8AZfGs=" alt="Data Analysis" class="mb-4 rounded w-full h-40 object-cover">
                 <h4 class="text-xl font-bold mb-2">Data Analysis</h4>
                 <p class="text-gray-600">Get actionable insights and data-driven reports.</p>
             </div>
         </div>
+        <div class="mt-10">
+            <a href="/services" class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition">
+                Learn More About Our Services
+            </a>
+        </div>
+    </section>
+
     </section>
 
     <!-- Why Choose Us -->
-<section class="relative z-10 py-16 bg-white text-center px-4">
-    <h2 class="text-3xl font-semibold mb-10">Why Choose Us?</h2>
-    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        <div class="p-6 shadow rounded bg-gray-50">
-            <img src="https://th.bing.com/th/id/OIP.E7MJJi1nzfZ8UU-2hldy9gHaFb?cb=iwp2&pid=ImgDet&w=179&h=131&c=7&dpr=1.5" alt="Accurate" class="mx-auto mb-4 w-20 h-20 object-contain">
-            <h5 class="text-lg font-semibold mb-2">Accurate</h5>
-            <p>Data you can trust.</p>
+    <section class="relative z-10 py-16 bg-white text-center px-4">
+        <h2 class="text-3xl font-semibold mb-10">Why Choose Us?</h2>
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div class="p-6 shadow rounded bg-gray-50">
+                <img src="https://th.bing.com/th/id/OIP.E7MJJi1nzfZ8UU-2hldy9gHaFb?cb=iwp2&pid=ImgDet&w=179&h=131&c=7&dpr=1.5" alt="Accurate" class="mx-auto mb-4 w-20 h-20 object-contain">
+                <h5 class="text-lg font-semibold mb-2">Accurate</h5>
+                <p>Data you can trust.</p>
+            </div>
+            <div class="p-6 shadow rounded bg-gray-50">
+                <img src="https://th.bing.com/th/id/OIP.NiSTikwq73E9_EzO-lRCHwHaHa?cb=iwp2&pid=ImgDet&w=179&h=179&c=7&dpr=1.5" alt="Professional" class="mx-auto mb-4 w-20 h-20 object-contain">
+                <h5 class="text-lg font-semibold mb-2">Professional</h5>
+                <p>Experienced data experts.</p>
+            </div>
+            <div class="p-6 shadow rounded bg-gray-50">
+                <img src="https://th.bing.com/th/id/OIP.IKTufQmQKV3CG-0txYPFAQHaE8?cb=iwp2&pid=ImgDet&w=179&h=119&c=7&dpr=1.5" alt="Fast Turnaround" class="mx-auto mb-4 w-20 h-20 object-contain">
+                <h5 class="text-lg font-semibold mb-2">Fast Turnaround</h5>
+                <p>Quick and reliable delivery.</p>
+            </div>
+            <div class="p-6 shadow rounded bg-gray-50">
+                <img src="https://th.bing.com/th/id/OIP.2M26TYohr2aZgBstejR-iwHaE8?cb=iwp2&pid=ImgDet&w=179&h=119&c=7&dpr=1.5" alt="Custom Solutions" class="mx-auto mb-4 w-20 h-20 object-contain">
+                <h5 class="text-lg font-semibold mb-2">Custom Solutions</h5>
+                <p>Tailored to your needs.</p>
+            </div>
         </div>
-        <div class="p-6 shadow rounded bg-gray-50">
-            <img src="https://th.bing.com/th/id/OIP.NiSTikwq73E9_EzO-lRCHwHaHa?cb=iwp2&pid=ImgDet&w=179&h=179&c=7&dpr=1.5" alt="Professional" class="mx-auto mb-4 w-20 h-20 object-contain">
-            <h5 class="text-lg font-semibold mb-2">Professional</h5>
-            <p>Experienced data experts.</p>
-        </div>
-        <div class="p-6 shadow rounded bg-gray-50">
-            <img src="https://th.bing.com/th/id/OIP.IKTufQmQKV3CG-0txYPFAQHaE8?cb=iwp2&pid=ImgDet&w=179&h=119&c=7&dpr=1.5" alt="Fast Turnaround" class="mx-auto mb-4 w-20 h-20 object-contain">
-            <h5 class="text-lg font-semibold mb-2">Fast Turnaround</h5>
-            <p>Quick and reliable delivery.</p>
-        </div>
-        <div class="p-6 shadow rounded bg-gray-50">
-            <img src="https://th.bing.com/th/id/OIP.2M26TYohr2aZgBstejR-iwHaE8?cb=iwp2&pid=ImgDet&w=179&h=119&c=7&dpr=1.5" alt="Custom Solutions" class="mx-auto mb-4 w-20 h-20 object-contain">
-            <h5 class="text-lg font-semibold mb-2">Custom Solutions</h5>
-            <p>Tailored to your needs.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Call to Action -->
     <section id="contact" class="relative z-10 py-16 bg-gray-100 text-center px-4">

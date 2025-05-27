@@ -22,7 +22,7 @@
         <!-- Service 2 -->
         <div class="col-md-6 mb-4">
             <div class="card shadow-sm h-100">
-                <img src="https://th.bing.com/th/id/OIP.1exgo9JMKRvYtXDpy97xXQHaFL?w=230&h=180&c=7&r=0&o=7&cb=iwp2&dpr=1.5&pid=1.7&rm=3" class="card-img-top" alt="Dashboard Creation">
+                <img src="https://img.freepik.com/premium-photo/data-analyst-working-analytics-dashboard-engaged-business-analytics-including-kpis_1233889-1117.jpg?ga=GA1.1.341280457.1747978859&semt=ais_hybrid&w=740" class="card-img-top" alt="Dashboard Creation">
                 <div class="card-body">
                     <h4 class="card-title">Dashboard Creation</h4>
                     <p class="card-text">We create custom dashboards using Power BI, Tableau, and Google Data Studio...</p>
@@ -34,7 +34,7 @@
         <!-- Service 3 -->
         <div class="col-md-6 mb-4">
             <div class="card shadow-sm h-100">
-                <img src="https://th.bing.com/th/id/OIP.VahjK7T92ijeDOI-qJ8fbQHaE8?w=257&h=180&c=7&r=0&o=7&cb=iwp2&dpr=1.5&pid=1.7&rm=3" class="card-img-top" alt="Data Analysis Reports">
+                <img src="https://img.freepik.com/premium-photo/young-african-businesswoman-presenting-data-analysis-dashboard-tv-concord_31965-129100.jpg?ga=GA1.1.341280457.1747978859&semt=ais_hybrid&w=740" class="card-img-top" alt="Data Analysis Reports">
                 <div class="card-body">
                     <h4 class="card-title">Data Analysis and Insights Reports</h4>
                     <p class="card-text">We provide in-depth analysis and insights, uncovering trends, patterns...</p>
@@ -46,7 +46,7 @@
         <!-- Service 4 -->
         <div class="col-md-6 mb-4">
             <div class="card shadow-sm h-100">
-                <img src="https://th.bing.com/th/id/OIP.eMggsB8uel8_5A9VeXDZSAHaEK?w=308&h=180&c=7&r=0&o=7&cb=iwp2&dpr=1.5&pid=1.7&rm=3" class="card-img-top" alt="Small Business Analytics">
+                <img src="https://img.freepik.com/premium-photo/person-analyzing-data-computer-screen-illustrating-knowledgeintensive-tasks-whitecollar-work_73899-69750.jpg?ga=GA1.1.341280457.1747978859&semt=ais_hybrid&w=740" class="card-img-top" alt="Small Business Analytics">
                 <div class="card-body">
                     <h4 class="card-title">Small Business Analytics Setup</h4>
                     <p class="card-text">We set up analytics systems tailored for small businesses...</p>
@@ -70,7 +70,7 @@
         <!-- Service 6 -->
         <div class="col-md-6 mb-4">
             <div class="card shadow-sm h-100">
-                <img src="https://penncomp.com/wp-content/uploads/2022/08/35251012_businessman-and-abstract-infographics-in-augmented-reality.jpg" class="card-img-top" alt="Tech Consultancy">
+                <img src="https://img.freepik.com/premium-photo/handsome-young-african-man-shirt-looking-camera-smiling-while-working-office_425904-2030.jpg?ga=GA1.1.341280457.1747978859&semt=ais_hybrid&w=740" class="card-img-top" alt="Tech Consultancy">
                 <div class="card-body">
                     <h4 class="card-title">Tech Consultancy</h4>
                     <p class="card-text">Advising our clients on the best technologies to adopt for their goals.</p>
