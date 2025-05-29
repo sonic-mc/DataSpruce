@@ -6,6 +6,9 @@
   <title>AGT DataSpruce Pvt Ltd - @yield('title')</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Add in <head> if not already -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
   <style>
     body {
@@ -112,6 +115,41 @@
       color: #00c6ff;
       margin-right: 6px;
     }
+
+    .contact-buttons {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.contact-btn {
+  text-decoration: none;
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn.email {
+  background-color: #007bff; 
+}
+
+.contact-btn.email:hover {
+  background-color: #0056b3;
+}
+
+.contact-btn.whatsapp {
+  background-color: #3bac64;
+}
+
+.contact-btn.whatsapp:hover {
+  background-color: #1ebe57;
+}
+
   </style>
 </head>
 

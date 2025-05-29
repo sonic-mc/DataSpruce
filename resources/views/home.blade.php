@@ -139,7 +139,7 @@
     <section id="contact" class="relative z-10 py-16 bg-gray-100 text-center px-4">
         <h3 class="text-2xl font-semibold mb-6">Ready to Transform Your Data?</h3>
         <a href="{{ route('contact') }}" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-500">Contact Us</a>
-        <a href="{{ route('services') }}" class="ml-4 bg-yellow-400 text-gray-800 px-6 py-3 rounded hover:bg-yellow-300">Explore Our Services</a>
+        <a href="{{ route('services') }}"  class="block sm:inline mt-4 sm:mt-0 bg-yellow-400 text-gray-800 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded hover:bg-yellow-200 text-center">Explore Our Services</a>
     </section>
 
 </body>
