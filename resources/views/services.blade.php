@@ -34,7 +34,7 @@
                     <p>
                         Whether you’re dealing with messy spreadsheets, exported CRM data, or sales records, I’ll clean it up and deliver a polished dataset that saves you time and boosts productivity.
                     </p></p>
-                    <a href="#" class="btn btn-primary">Contact Us</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                     <p>
                         Whether you're tracking sales performance, website traffic, marketing ROI, or employee productivity — we’ll build a professional dashboard tailored to your needs, using the tools you prefer: Power BI, Tableau, or Google Data Studio.
                     </p></p>
-                    <a href="#" class="btn btn-primary">Contact Us</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
                     <p class="card-text"><p><em>We provide detailed data analysis and insight reports that uncover hidden patterns, trends, and opportunities to support smart decision-making.</em></p>
 
                     <p>
-                        Raw data alone doesn't drive growth — insights do. We help businesses turn numbers into knowledge by analyzing their data to reveal what’s working, what’s not, and where opportunities lie. 
+                        Raw data alone doesn't drive growth — insights do. We help businesses turn numbers into knowledge by analyzing their data to reveal what’s working, what’s not, and where opportunities lie.
                         Whether you're working with sales data, customer behavior, marketing performance, or operational metrics — we dig deep and make sense of it.
                     </p>
                     
@@ -122,7 +122,7 @@
                     <p>
                         Whether you run an online shop, a local service business, or a personal brand, we’ll equip you with the tools and insights you need to grow — without needing a full-time data analyst.
                     </p></p>
-                    <a href="#" class="btn btn-primary">Contact Us</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@
                     <p>
                         Whether you're just starting out or looking to upgrade your online presence, we’ll deliver a website that not only looks amazing — but also works as a powerful marketing tool that helps you attract leads, build credibility, and grow your business.
                     </p></p>
-                    <a href="#" class="btn btn-primary">Contact Us</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -180,7 +180,7 @@
                     <p>
                         Whether you use Excel, Google Workspace, Airtable, APIs, or cloud tools like Zapier or Make (Integromat), we’ll build a reliable system that saves you hours of manual work and gives you peace of mind.
                     </p></p>
-                    <a href="#" class="btn btn-primary">Contact Us</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -210,7 +210,7 @@
                         <p>
                             With years of experience and a deep understanding of emerging technologies, we guide you toward the tools and systems that will maximize your impact and efficiency — while minimizing unnecessary expenses and complexity.
                         </p></p>
-                    <a href="#" class="btn btn-primary">Contact Us</a>
+                    <a href="{{ route('contact') }}" class="btn btn-primary">Contact Us</a>
                 </div>
             </div>
         </div>

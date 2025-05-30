@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DataSpruce - Home</title>
+    <link rel="icon" href="{{ asset('faviconn.ico') }}" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,23 +26,31 @@
 
     <!-- Navigation -->
     <nav class="relative z-10 bg-blue-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-lg font-bold">DataSpruce Pvt Ltd</div>
-            <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between flex-wrap md:flex-nowrap">
+            <!-- Left: Logo + Brand -->
+            <div class="flex items-center space-x-3">
+                <img src="{{ asset('images/Dataspruce.png') }}" alt="DataSpruce Logo" class="h-10 w-auto">
+                <span class="text-lg font-bold">DataSpruce Pvt Ltd</span>
+            </div>
+    
+            <!-- Mobile Toggle -->
+            <button id="nav-toggle" class="md:hidden text-white focus:outline-none ml-auto">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h16M4 18h16"></path>
+                        d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
             </button>
+    
+            <!-- Navigation Menu -->
+            <ul id="nav-menu"
+                class="hidden w-full md:w-auto md:flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-left md:text-center">
+                <li><a href="{{ route('home') }}" class="block py-2 hover:text-gray-300">Home</a></li>
+                <li><a href="{{ route('about') }}" class="block py-2 hover:text-gray-300">About</a></li>
+                <li><a href="{{ route('services') }}" class="block py-2 hover:text-gray-300">Services</a></li>
+                <li><a href="{{ route('contact') }}" class="block py-2 hover:text-gray-300">Contact</a></li>
+            </ul>
         </div>
-        <ul id="nav-menu"
-            class="hidden flex-col md:flex md:flex-row md:space-x-6 mt-4 md:mt-0 px-6 pb-4 md:pb-0 text-left md:text-center">
-            <li><a href="{{ route('home') }}" class="block py-2 hover:text-gray-300">Home</a></li>
-            <li><a href="{{ route('about') }}" class="block py-2 hover:text-gray-300">About</a></li>
-            <li><a href="{{ route('services') }}" class="block py-2 hover:text-gray-300">Services</a></li>
-            <li><a href="{{ route('contact') }}" class="block py-2 hover:text-gray-300">Contact</a></li>
-        </ul>
     </nav>
     <script>
         const toggle = document.getElementById('nav-toggle');
@@ -57,10 +66,16 @@
         <div class="bg-white bg-opacity-80 py-10 px-4 rounded-lg max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl font-light mb-4">Transform Your Data, Empower Your Business</h1>
             <p class="text-gray-700 text-lg mb-8">Professional data analytics and cleaning solutions for your business.</p>
-            <div class="space-x-4">
-                <a href="#services" class="bg-gray-800 text-white px-6 py-3 rounded hover:bg-gray-700">Get Started</a>
-                <a href="#contact" class="bg-yellow-400 text-gray-800 px-6 py-3 rounded hover:bg-yellow-300">Contact Us</a>
-            </div>
+            <div class="space-x-4 flex flex-wrap justify-center sm:space-x-4 space-x-2">
+                <a href="#services"
+                   class="bg-gray-800 text-white px-6 py-3 rounded hover:bg-gray-700 text-sm sm:text-base sm:px-6 sm:py-3 px-4 py-2">
+                  Get Started
+                </a>
+                <a href="#contact"
+                   class="bg-yellow-400 text-gray-800 px-6 py-3 rounded hover:bg-yellow-300 text-sm sm:text-base sm:px-6 sm:py-3 px-4 py-2">
+                  Contact Us
+                </a>
+              </div>
         </div>
     </section>
 
@@ -136,11 +151,12 @@
     </section>
 
     <!-- Call to Action -->
-    <section id="contact" class="relative z-10 py-16 bg-gray-100 text-center px-4">
-        <h3 class="text-2xl font-semibold mb-6">Ready to Transform Your Data?</h3>
+    <section id="contact" class="relative z-10 py-16 bg-blue-900 text-center px-4">
+        <h3 class="text-2xl text-white font-semibold mb-6">Ready to Transform Your Data?</h3>
         <a href="{{ route('contact') }}" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-500">Contact Us</a>
         <a href="{{ route('services') }}"  class="block sm:inline mt-4 sm:mt-0 bg-yellow-400 text-gray-800 px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base rounded hover:bg-yellow-200 text-center">Explore Our Services</a>
     </section>
+
 
 </body>
 </html>
