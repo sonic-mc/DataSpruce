@@ -24,6 +24,13 @@
       color: #121212;
     }
 
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     .operating-hours {
       background-color: hsl(210, 25%, 97%);
       color: #0f0e0e;
@@ -207,10 +214,10 @@
   </div>
 
  <!-- Responsive Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark px-4" style="background-color: #1e3a8a;">
+ <nav class="navbar navbar-expand-lg navbar-dark px-4" style="background-color: #1e3a8a;">
   <a class="navbar-brand d-flex align-items-center" href="#">
-    <img src="{{ asset('images/Dataspruce.png') }}" alt="DataSpruce Logo" height="40" class="me-2">
-    <span>DataSpruce Pvt Ltd</span>
+    <img src="{{ asset('images/Dataspruce-2.png') }}" alt="DataSpruce Logo" height="60" class="me-2">
+    <span class="d-none d-lg-inline">DataSpruce Pvt Ltd</span>
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
