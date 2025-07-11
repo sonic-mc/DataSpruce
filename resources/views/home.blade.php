@@ -7,6 +7,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* From Uiverse.io by gharsh11032000 */
+        .animated-button {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding: 16px 36px;
+          border: 4px solid;
+          border-color: transparent;
+          font-size: 16px;
+          background-color: inherit;
+          border-radius: 100px;
+          font-weight: 600;
+          color: rgb(244, 248, 239);
+          box-shadow: 0 0 0 2px rgb(254, 254, 251);
+          cursor: pointer;
+          overflow: hidden;
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .animated-button svg {
+          position: absolute;
+          width: 24px;
+          fill: greenyellow;
+          z-index: 9;
+          transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .animated-button .arr-1 {
+          right: 16px;
+        }
+        
+        .animated-button .arr-2 {
+          left: -25%;
+        }
+        
+        .animated-button .circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 20px;
+          height: 20px;
+          background-color: rgb(234, 238, 229);
+          border-radius: 50%;
+          opacity: 0;
+          transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .animated-button .text {
+          position: relative;
+          z-index: 1;
+          transform: translateX(-12px);
+          transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .animated-button:hover {
+          box-shadow: 0 0 0 12px transparent;
+          color: #212121;
+          border-radius: 12px;
+        }
+        
+        .animated-button:hover .arr-1 {
+          right: -25%;
+        }
+        
+        .animated-button:hover .arr-2 {
+          left: 16px;
+        }
+        
+        .animated-button:hover .text {
+          transform: translateX(12px);
+        }
+        
+        .animated-button:hover svg {
+          fill: #212121;
+        }
+        
+        .animated-button:active {
+          scale: 0.95;
+          box-shadow: 0 0 0 4px rgb(241, 247, 231);
+        }
+        
+        .animated-button:hover .circle {
+          width: 220px;
+          height: 220px;
+          opacity: 1;
+        }
+        </style>
+        
 </head>
 <body class="bg-white text-gray-800 font-sans relative overflow-x-hidden">
 
@@ -24,41 +116,96 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="relative z-10 bg-blue-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between flex-wrap md:flex-nowrap">
-            <!-- Left: Logo + Brand -->
-            <div class="flex items-center space-x-3">
-                <img src="{{ asset('images/Dataspruce-2.png') }}" alt="DataSpruce Logo"  class="h-20 w-auto">
-                <span class="text-lg font-bold">DataSpruce Pvt Ltd</span>
-            </div>
-    
-            <!-- Mobile Toggle -->
-            <button id="nav-toggle" class="md:hidden text-white focus:outline-none ml-auto">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-    
-            <!-- Navigation Menu -->
-            <ul id="nav-menu"
-                class="hidden w-full md:w-auto md:flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 text-left md:text-center">
-                <li><a href="{{ route('home') }}" class="block py-2 hover:text-gray-300">Home</a></li>
-                <li><a href="{{ route('about') }}" class="block py-2 hover:text-gray-300">About</a></li>
-                <li><a href="{{ route('services') }}" class="block py-2 hover:text-gray-300">Services</a></li>
-                <li><a href="{{ route('contact') }}" class="block py-2 hover:text-gray-300">Contact</a></li>
-            </ul>
+  <!-- Navigation -->
+<!-- Navigation -->
+<nav class="relative z-10 bg-blue-900 text-white">
+    <div class="w-full py-4 px-4 flex items-center justify-between md:justify-start">
+        <!-- Logo + Brand -->
+        <div class="flex items-center space-x-2">
+            <img src="{{ asset('images/Dataspruce-2.png') }}" alt="DataSpruce Logo" class="h-16 w-auto">
+            <span class="text-lg font-bold">DataSpruce Pvt Ltd</span>
         </div>
-    </nav>
-    <script>
-        const toggle = document.getElementById('nav-toggle');
-        const menu = document.getElementById('nav-menu');
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+
+        <!-- Mobile Toggle -->
+        <button id="nav-toggle" class="md:hidden ml-auto text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+      <!-- Make sure Font Awesome is included -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<ul id="nav-menu"
+    class="hidden md:flex ml-auto space-x-4 text-left md:text-center mt-4 md:mt-0">
+
+    <li>
+        <a href="{{ route('home') }}">
+            <button class="animated-button">
+                <span class="text">Home</span>
+                <span class="circle"></span>
+                <i class="fas fa-house arr-1"></i>
+            </button>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ route('about') }}">
+            <button class="animated-button">
+                <span class="text">About</span>
+                <span class="circle"></span>
+                <i class="fas fa-user arr-1"></i>
+            </button>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ route('services') }}">
+            <button class="animated-button">
+                <span class="text">Services</span>
+                <span class="circle"></span>
+                <i class="fas fa-cogs arr-1"></i>
+            </button>
+        </a>
+    </li>
+
+    <li>
+        <a href="{{ route('contact') }}">
+            <button class="animated-button">
+                <span class="text">Contact</span>
+                <span class="circle"></span>
+                <i class="fas fa-envelope arr-1"></i>
+            </button>
+        </a>
+    </li>
+
+</ul>
+
+
+    <!-- Mobile Menu (Separate Block) -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <ul class="flex flex-col space-y-2">
+            <li><a href="{{ route('home') }}" class="block py-2 hover:text-gray-300">Home</a></li>
+            <li><a href="{{ route('about') }}" class="block py-2 hover:text-gray-300">About</a></li>
+            <li><a href="{{ route('services') }}" class="block py-2 hover:text-gray-300">Services</a></li>
+            <li><a href="{{ route('contact') }}" class="block py-2 hover:text-gray-300">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Toggle Script -->
+<script>
+    const toggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
 
     <!-- Hero Section -->
     <section class="relative z-10 text-center px-4 py-20 md:py-32 bg-cover bg-center"
